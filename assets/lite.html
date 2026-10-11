@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; frame-src blob: about:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+<meta name="color-scheme" content="light dark">
+<title>@@TITLE@@ · Chat Archify Lite</title>
+<style>
+:root{color-scheme:light;--paper:#f4f5f7;--panel:#fff;--ink:#202b3a;--muted:#586476;--line:#dbe1e8;--accent:#245bce;--soft:#edf3ff;--shadow:0 18px 60px #182b4520}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark;--paper:#141923;--panel:#1d2532;--ink:#edf2fa;--muted:#b5c0d2;--line:#374359;--accent:#96b9ff;--soft:#293952;--shadow:0 18px 60px #0007}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.6 system-ui,"Microsoft YaHei",sans-serif}button,input,select{font:inherit;color:inherit}button,a{touch-action:manipulation}button{cursor:pointer}a{color:var(--accent);text-underline-offset:3px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}[hidden]{display:none!important}
+.top{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}.brand{font-size:11px;letter-spacing:.1em;color:var(--accent);font-weight:700}.top h1{font-size:22px;line-height:1.3;margin:2px 0}.top p{margin:3px 0;color:var(--muted);font-size:12px}.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.search-box{display:grid;gap:2px;min-width:210px}.search-box label,.picker label{font-size:11px;color:var(--muted)}input,select{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:7px 10px;min-width:0}.button{background:var(--panel);border:1px solid var(--line);border-radius:7px;min-height:36px;padding:6px 11px}.button:hover{background:var(--soft)}.button.primary{background:var(--accent);border-color:var(--accent);color:#fff}.search-hint{font-size:10px;color:var(--muted)}.search-results{position:absolute;top:68px;right:16px;width:min(390px,90vw);max-height:360px;overflow:auto;z-index:5;background:var(--panel);border:1px solid var(--line);border-radius:9px;box-shadow:var(--shadow)}.search-result{display:block;width:100%;padding:9px 12px;text-align:left;border:0;border-bottom:1px solid var(--line);background:var(--panel)}.search-result:hover{background:var(--soft)}.search-empty,.notice{padding:10px 12px;color:var(--muted)}.picker{display:grid;gap:2px;min-width:180px}.picker select{width:100%}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;padding:16px;max-width:2100px;margin:auto;align-items:start}.workspace.show-reader{grid-template-columns:minmax(0,1fr) minmax(340px,420px)}.graph-panel,.reader-panel{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden}.graph-meta{padding:10px 14px;color:var(--muted);font-size:12px;border-bottom:1px solid var(--line)}iframe{display:block;width:100%;height:calc(100dvh - 200px);min-height:460px;border:0;background:var(--panel)}.reader-panel{max-height:calc(100dvh - 32px);position:sticky;top:16px;overflow:auto}.reader-bar{display:flex;gap:8px;align-items:center;justify-content:flex-end;padding:10px;border-bottom:1px solid var(--line);background:var(--soft)}.reader-heading{font-size:20px;line-height:1.4;margin:0;padding:17px 18px;border-bottom:1px solid var(--line)}.reader-actions{display:flex;gap:7px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line)}#reader-content{padding:0 18px 20px;min-height:120px}.reader-section{padding:15px 0;border-bottom:1px solid var(--line)}.reader-section h3{font-size:12px;color:var(--muted);margin:0 0 8px}.reader-section p{margin:0 0 8px;overflow-wrap:anywhere}.meta,.note{font-size:12px;color:var(--muted)}.resource-line{padding:9px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}.resource-line:first-of-type{border-top:0}.resource-line .actions{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0}.link-button{padding:1px 0;border:0;background:none;color:var(--accent);text-decoration:underline;text-underline-offset:3px;text-align:left}.status{display:inline-block;font-size:11px;padding:1px 7px;border:1px solid var(--line);border-radius:4px}.source-line{display:block;white-space:pre-wrap;scroll-margin-block:35vh}.locator-target{background:#ffd76a99;box-shadow:inset 3px 0 #d89000}.locator-help{padding:8px 11px;margin:8px 0;background:var(--soft);border-radius:6px;color:var(--muted);font-size:12px}.markdown-body{overflow-wrap:anywhere}.markdown-body h1,.markdown-body h2,.markdown-body h3{line-height:1.35}.markdown-body pre,.raw-source{padding:12px;background:var(--soft);border-radius:7px;overflow:auto;white-space:pre-wrap}.markdown-body img{max-width:100%;height:auto}.markdown-body table{border-collapse:collapse}.markdown-body th,.markdown-body td{border:1px solid var(--line);padding:5px 8px}.coverage{margin:0 16px 18px;padding:12px 16px;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-size:12px}.coverage summary{cursor:pointer}.coverage p{overflow-wrap:anywhere}.reader-empty{padding:24px 4px;color:var(--muted)}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:900px){.top{padding:13px 15px}.workspace.show-reader{grid-template-columns:minmax(0,1fr) minmax(300px,390px)}}
+@media(max-width:780px){.top{display:grid;align-items:stretch}.tools{display:grid;grid-template-columns:1fr 1fr}.search-box{grid-column:1/-1}.search-results{top:125px;left:12px;right:12px;width:auto}.workspace,.workspace.show-reader{display:block;padding:10px;min-height:0}.workspace.show-graph .reader-panel{display:none}.workspace.show-reader .graph-panel{display:none}.graph-panel{height:calc(100dvh - 215px);min-height:420px}.reader-panel{height:calc(100dvh - 215px);max-height:none;position:static}.reader-heading{padding:13px 14px}#reader-content{padding:0 14px 18px}iframe{height:100%;min-height:0}.coverage{margin:0 10px 12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div><div class="brand">CHAT ARCHIFY LITE</div><h1 id="page-title">@@TITLE@@</h1><p>单次对话 · 单张总览 · 先看图，再读节点摘要和来源</p></div>
+  <div class="tools">
+    <div class="search-box"><label for="title-search">搜索阶段标题</label><input id="title-search" type="search" placeholder="只搜索节点标题" autocomplete="off"><span class="search-hint">不检索摘要、关系说明或文件正文。</span></div>
+    <label class="picker"><span>定位阶段</span><select id="node-picker" aria-label="定位阶段"><option value="">选择一个阶段</option></select></label>
+    <button class="button" id="graph-toggle" type="button">打开阅读面板</button>
+    <button class="button" id="json-download" type="button">下载 JSON 记录</button>
+    <div class="search-results" id="search-results" hidden></div>
+  </div>
+</header>
+<main class="workspace show-graph" id="workspace">
+  <section class="graph-panel" id="graph-panel" aria-label="对话总览框图">
+    <div class="graph-meta" id="graph-meta">框图加载中</div>
+    <iframe id="diagram" title="对话总览图" sandbox="allow-scripts allow-same-origin allow-downloads" referrerpolicy="no-referrer"></iframe>
+    <div class="graph-meta" id="diagram-note" hidden>图内选择暂不可用；仍可用上方“定位阶段”阅读全部节点。</div>
+  </section>
+  <aside class="reader-panel" id="reader-panel" aria-label="阶段与文件阅读面板" hidden>
+    <div class="reader-bar"><button class="button" id="reader-close" type="button" aria-label="返回框图">返回框图</button></div>
+    <h2 class="reader-heading" id="reader-title" tabindex="-1">选择一个阶段</h2>
+    <div class="reader-actions" id="reader-actions"></div>
+    <div id="reader-content" tabindex="0"></div>
+  </aside>
+</main>
+<details class="coverage"><summary>来源覆盖与 Lite 限制</summary><div id="coverage"></div></details>
+<div class="sr" id="announce" role="status" aria-live="polite"></div>
+<noscript><p>请在支持 JavaScript 的浏览器中打开此页面。</p></noscript>
+<script type="application/json" id="lite-data">@@PAYLOAD@@</script>
+<script>@@SCRIPT@@</script>
+</body>
+</html>

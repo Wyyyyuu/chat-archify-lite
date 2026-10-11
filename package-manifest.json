@@ -1,0 +1,33 @@
+{
+  "name": "chat-archify-lite",
+  "version": "0.1.1",
+  "files": {
+    "agents/openai.yaml": "a772d887b54d8d8f47884c62e15e5d2278ea9e3ccb3561b83cb9360cc83b62d2",
+    "assets/lite.html": "2baacebc873976d8a4bccc9de3cb4f106c8f88fb633407515660d5df13631b42",
+    "assets/lite.js": "de9b1d5d6016f01d2fadbeb8d8b62b00389f0edd991cb50dcf5c55445b0d5c11",
+    "assets/markdown.js": "889bcb0b6aaad0470cb132a3358804e4a4c6cfd69362ec7b60e575e4e5522ce5",
+    "assets/vendor/marked-LICENSE.md": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
+    "assets/vendor/marked.umd.js": "0db7abc826b5ac76f6ed11951ae34074ba50438ce6ea8d52889203779e5cbbad",
+    "assets/vendor/README.md": "bb760b8b5da5b8ac170906b394bfe306bdd91ab4f0c343bb81024230e35a0a4f",
+    "examples/interactive-demo/conversation.md": "7fbaa36f09bcec78f8f0ff3741ae1e4d1568099492992d8b8921da388013c403",
+    "examples/interactive-demo/evolution.json": "97568f943f316f35667a5c9a5824e0b5c4ae614661fd636f9cdc77b7cdcfd95e",
+    "examples/interactive-demo/manifest.json": "d95f6dc0ba9e3ea70187cca93b115b2856f948fc2bd95e4c548a25edd5697365",
+    "examples/interactive-demo/resources/daily-guide.md": "7aa2b084b546cfc9ad807b27391878a490ea90aeb01fdc9ace731319f731ba02",
+    "examples/interactive-demo/resources/reading-plan.md": "a92f2af2dde9d4f74125e147e2992b5c1b79114f18b04d51c9253157282debd0",
+    "examples/interactive-demo/resources/review-checklist.md": "8055b39c01410e3f1409e626dfbc0157213ab371d6e5833e0972179d3ab44f20",
+    "examples/interactive-demo/resources/source-brief.md": "82355b28060774da49c661c315cf126b4e275b95ddda6a5881425c5562960d8a",
+    "examples/interactive-demo/workflow-v2.json": "b34feb40b681798332faf159d45801a6a59d42e58855b620ac77e27fddf0e3b9",
+    "README.md": "6002218218f2e5475ff3528ecca03714b87baac81e1f3f0cd339faec253a9f65",
+    "README.zh-CN.md": "f6fac4a5d9349434b71b49ecf6b5ffc0660e56eaeb410fbc7f1538eb2a7ab3b1",
+    "references/graph-format.md": "9fabb4331bb159f1c1b841300d546c58cba43afb631133066373eccf85eba7e0",
+    "scripts/build_lite_demo.py": "84dc3230e8fc3fec970f9fcb29f0df57746d4b6e6dace9cae7fd8a3409ae90d9",
+    "scripts/check_routes.py": "62f65f08e1f2246102b9327665bf8c0b27f7944864276de961b24f3db1e9e7c0",
+    "scripts/credential_guard.py": "59a88c8688eacca2700ceab8f6bbf034bb8cbd1a83e901badb78c93ae1f248eb",
+    "scripts/lite_package.py": "8a787c7c2b6c3f78f56e7fbd0cd0c52f16b1a5855edd40bf40be3ef09dbc9138",
+    "scripts/record_schema.py": "89e8122f8d42655edb05b5b66dfb5b7f72c32f7119a7489c161710222b436910",
+    "SKILL.md": "a15345e367fd60ea12131075a1034ded18490d23bb4d182671b5e82f317d11a3",
+    "tests/lite-navigation.cjs": "5ce30dc5fd3ce892ebb263acbccfc9dfbf3ca288159e72e1c64413586dc20d58",
+    "tests/test_credential_guard.py": "de18d26bb9af1ff4293933af05b4795cebdbb28e49655771ebba40abdf14806f",
+    "tests/test_lite_package.py": "ddf88172a5364ccbe979b022cfc9cdf25cbd4cc4a2e46c11c73904f71abb53b8"
+  }
+}

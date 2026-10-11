@@ -1,0 +1,6 @@
+interface:
+  display_name: "Chat Archify Lite · 对话脉络图"
+  short_description: "将指定对话整理为默认看图、点击阅读节点证据与文件的可交互脉络图"
+  default_prompt: "使用 $chat-archify-lite 梳理我指定的对话，生成带来源证据与相关资源的交互脉络图。"
+policy:
+  allow_implicit_invocation: false

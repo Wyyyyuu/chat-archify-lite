@@ -1,0 +1,11 @@
+{
+  "sku": "chat-archify-lite",
+  "name": "Chat Archify Lite",
+  "version": "0.1.1",
+  "release_channel": "local-preview",
+  "visibility": "public",
+  "purchase_model": "free",
+  "checkout_status": "not_applicable",
+  "repository": "https://github.com/Wyyyyuu/chat-archify-lite",
+  "release": "https://github.com/Wyyyyuu/chat-archify-lite/releases/tag/v0.1.1"
+}
